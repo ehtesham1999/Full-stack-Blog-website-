@@ -18,8 +18,8 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
-
-mongoose.connect("mongodb+srv://admin_ehte:Shirin98@cluster0.tmjbb.mongodb.net/todoList?retryWrites=true&w=majority", { useNewUrlParser: true });
+//Note : replace password in angular bracktes in connection string
+mongoose.connect("mongodb+srv://admin_ehte:<password>@cluster0.tmjbb.mongodb.net/todoList?retryWrites=true&w=majority", { useNewUrlParser: true });
 
 const itemSchema = {
     title:  String,
